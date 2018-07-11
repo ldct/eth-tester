@@ -210,7 +210,12 @@ class PyEthereum21Backend(BaseChainBackend):
                     "`PyEthereum21Backend` requires a 2.0.0+ version of the "
                     "ethereum package to be installed."
                 )
-            elif version not in Spec('>=2.0.0,<2.2.0'):
+            elif version in Spec('>=2.4.0'):
+                raise BackendDistributionNotFound(
+                    "The `PyEthereum21Backend` requires a version of the `ethereum` "
+                    "package between 2.0.0 and 2.4.0.  Found {0}".format(version)
+                )
+            elif version not in Spec('>=2.0.0'):
                 raise BackendDistributionNotFound(
                     "The `PyEthereum21Backend` requires a 2.0.0+ version of the "
                     "`ethereum` package.  Found {0}".format(version)

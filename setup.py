@@ -26,8 +26,7 @@ extras_require = {
         "rlp<1",
     ],
     'pyethereum21': [
-        "ethereum>=2.1.0,<2.2.0",
-        "rlp<1",
+        "ethereum>=2.1.0,<2.4.0",
     ],
     'py-evm': [
         # Pin py-evm to exact version, until it leaves alpha.
